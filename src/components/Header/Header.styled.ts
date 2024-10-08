@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from '../../theme'
 
 export const Container = styled.header`
     display: flex;
@@ -15,9 +16,9 @@ export const Nav = styled.nav`
 export const NavOption = styled.a`
     padding: 0px 10px;
     line-height: 49px;
-    color: #414162;
+    color: ${theme.palette.primary[75]};
     cursor: pointer;
     &:hover {
-        color: #ca97fe
+        color: ${theme.palette.primary[25]}
     }
 `
