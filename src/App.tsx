@@ -1,4 +1,4 @@
-import { Button, Service, ServicesSection, StartSection } from "./App.styles";
+import { Ball, Button, OurNumbersSection, Service, ServicesSection, StartSection } from "./App.styles";
 import Header from "./components/Header/Header";
 
 import firstSectionBackground from '../public/assets/firstSectionBackground.png';
@@ -31,6 +31,24 @@ function App() {
       title: 'Otimização de finanças', 
       subtitle: 'Sou um parágrafo. Clique aqui para adicionar e editar o texto.'
     }
+  ]
+  const ourNumbers = [
+    {
+      title: 15,
+      subtitle: 'Anos no mercado'
+    },
+    {
+      title: 36,
+      subtitle: 'Especialistas'
+    },
+    {
+      title: 120,
+      subtitle: 'Clientes anuais'
+    },
+    {
+      title: 9,
+      subtitle: 'Parceiros'
+    },
   ]
 
   const renderService = ({icon, title, subtitle, key}: ServiceProps) => (
@@ -74,6 +92,26 @@ function App() {
         </div>
       </ServicesSection>
       {/* about section */}
+      <OurNumbersSection>
+          <div className="title-container">
+            <p className="title-text">Números são o nosso forte</p>
+          </div>
+          <div className="numbers-container">
+            {
+              ourNumbers.map((element, index) => {
+                return (
+                  <div className="number-card">
+                    <div>
+                      <p className="number-title">{element.title}</p>
+                      <p className="number-description">{element.subtitle}</p>
+                    </div>
+                    {index < ourNumbers.length - 1 && <Ball />}
+                  </div>
+                )
+              })
+            }
+          </div>
+      </OurNumbersSection>
       {/* feedbacks section */}
       {/* clients section */}
       {/* contact section */}

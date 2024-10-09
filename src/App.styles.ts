@@ -43,6 +43,7 @@ export const ServicesSection = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: 125px;
+    height: 90%;
     & .title-container {
         display: flex;
         flex-direction: column;
@@ -55,6 +56,7 @@ export const ServicesSection = styled.div`
             text-transform: uppercase;
             font-weight: 600;
             margin: 0px;
+            letter-spacing: 0.7px;
         };
         & .cta-text {
             font-size: 36px;
@@ -62,6 +64,7 @@ export const ServicesSection = styled.div`
             max-width: 350px;
             text-align: center;
             margin: 0px;
+            color: ${theme.palette.secondary[50]}
         }     
     };
     & .services-container {
@@ -89,4 +92,51 @@ export const Service = styled.div`
         margin: 0px;
         padding-top: 10px;
     }
+`
+
+export const OurNumbersSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    background: ${theme.palette.secondary[50]};
+    height: 50%;
+    color: ${theme.palette.common.white};
+    & .title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .title-text {
+            font-size: 36px;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+    };
+    & .numbers-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+        & .number-card {
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+            & .number-title {
+                font-size: 80px;
+                margin: 0px;
+                font-weight: 700;
+                text-align: center;
+            };
+            & .number-description {
+                font-size: 18px;
+                margin: 0px;
+            }
+        };
+    }
+`
+
+export const Ball = styled.div`
+    height: 7px;
+    width: 7px;
+    border-radius: 1000px;
+    background: ${theme.palette.common.white}
 `
