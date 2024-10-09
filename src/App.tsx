@@ -1,6 +1,7 @@
-import { Ball, Button, OurNumbersSection, Service, ServicesSection, StartSection } from "./App.styles";
+import { AboutUsSection, AboutUsRightSide, Ball, Button, Description, OurNumbersSection, Service, ServicesSection, StartSection, Title1, Title2, AboutUsSectionTitle2, AboutUsSectionDescription } from "./App.styles";
 import Header from "./components/Header/Header";
 
+import aboutUsSectionBackground from '../public/assets/aboutUsSectionBackground.png';
 import firstSectionBackground from '../public/assets/firstSectionBackground.png';
 import CirclesIcon from "./shared/icons/CirclesIcon";
 import CheckIcon from "./shared/icons/CheckIcon";
@@ -80,8 +81,8 @@ function App() {
       {/* service section */}
       <ServicesSection>
         <div className="title-container">
-          <p className="title">Serviços</p>
-          <p className="cta-text">Dê uma turbinada no seu negócio</p>
+          <Title1>Serviços</Title1>
+          <Title2>Dê uma turbinada no seu negócio</Title2>
         </div>
         <div className="services-container">
           {
@@ -113,6 +114,16 @@ function App() {
           </div>
       </OurNumbersSection>
       {/* feedbacks section */}
+      <AboutUsSection>
+        <div className="left-side">
+          <Title1>SOBRE</Title1>
+          <AboutUsSectionTitle2>Os melhores profissionais</AboutUsSectionTitle2>
+          <AboutUsSectionDescription>Sou um parágrafo. Aqui você pode adicionar seu texto. É fácil, clique em "Editar texto" ou clique duas vezes sobre mim para editar seu conteúdo e alterar a fonte. Você também pode me arrastar e soltar em qualquer lugar da sua página. Sou um ótimo espaço para compartilhar a sua história com os visitantes.</AboutUsSectionDescription>
+          <AboutUsSectionDescription>Use este espaço para escrever um texto longo sobre sua empresa e sobre os serviços que você oferece. Conte aos visitantes a história de como você teve a ideia de criar essa empresa e o que o torna diferente de seus concorrentes. Você pode apresentar a sua equipe, seus projetos e metas. Faça com que a sua empresa se destaque e mostre aos visitantes quem você é. Clique em "Editar texto" para começar.</AboutUsSectionDescription>
+        </div>
+        <AboutUsRightSide backgroundimage={aboutUsSectionBackground}>
+        </AboutUsRightSide>
+      </AboutUsSection>
       {/* clients section */}
       {/* contact section */}
     </div>

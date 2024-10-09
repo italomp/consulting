@@ -39,6 +39,45 @@ export const StartSection = styled.div<{backgroundimage: string}>`
     }
 `
 
+export const Title1 = styled.p`
+    color: ${theme.palette.primary[50]};
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0px;
+    letter-spacing: 0.7px;
+`
+
+export const Title2 = styled.p`
+    color: ${theme.palette.secondary[50]};
+    font-size: 36px;
+    font-weight: 600;
+    max-width: 350px;
+    text-align: center;
+    margin: 0px;
+`
+export const AboutUsSectionTitle2 = styled(Title2)`
+    text-align: left; 
+    padding-top: 20px;
+`
+
+export const Description = styled.p`
+    font-weight: 400;
+    max-width: 285px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 10px;
+    color: ${theme.palette.secondary[50]};
+`
+
+export const AboutUsSectionDescription = styled(Description)`
+    text-align: left;
+    max-width: 465px; 
+    font-size: 18px,;
+    letter-spacing: 0.7px;
+    padding-top: 35px;
+`
+
+
 export const ServicesSection = styled.div`
     display: flex;
     flex-direction: column;
@@ -51,21 +90,6 @@ export const ServicesSection = styled.div`
         align-items: center;
         row-gap: 30px;
         padding-top: 120px;
-        & .title {
-            color: ${theme.palette.primary[50]};
-            text-transform: uppercase;
-            font-weight: 600;
-            margin: 0px;
-            letter-spacing: 0.7px;
-        };
-        & .cta-text {
-            font-size: 36px;
-            font-weight: 600;
-            max-width: 350px;
-            text-align: center;
-            margin: 0px;
-            color: ${theme.palette.secondary[50]}
-        }     
     };
     & .services-container {
         display: flex;
@@ -138,5 +162,19 @@ export const Ball = styled.div`
     height: 7px;
     width: 7px;
     border-radius: 1000px;
-    background: ${theme.palette.common.white}
+    background: ${theme.palette.common.white};
+`
+
+export const AboutUsSection = styled.div`
+    display: flex;
+    & .left-side {
+        padding: 100px 140px;
+    };
+`
+
+export const AboutUsRightSide = styled.div<{backgroundimage: string}>`
+    flex: 1;
+    background: url(${(props) => props.backgroundimage});
+    background-size: cover;
+    background-position: center;
 `
